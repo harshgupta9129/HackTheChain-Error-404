@@ -8,29 +8,64 @@
 </head>
 <body>
     <div class="Welcome">
-        <h1>
-            Welcome to College Portal !
-        </h1>
+        <h1>Welcome to College Portal!</h1>
     </div>
+    
     <nav>
         <ol>
-            <a href="https://www.google.com/" target="_blank"><button>Home</button></a>
-            <a href="https://www.google.com/" target="_blank"><button>About Us</button></a>
-            <a href="https://www.google.com/" target="_blank"><button>Contact Us</button></a>
-            <a href="https://www.google.com/" target="_blank"><button>Help</button></a>
-            
+            <a href="#home"><button>Home</button></a>
+            <a href="#about"><button>About Us</button></a>
+            <a href="#contact"><button>Contact Us</button></a>
+            <a href="#help"><button>Help</button></a>
         </ol>
     </nav>
+
+    <div class="search-container">
+        <input type="text" placeholder="Search..." class="search-bar">
+        <button class="search-button">Search</button>
+    </div>
+
     <hr>
+    
     <div class="log_in">
-        <h2>
-            Select the role for logging in
-        </h2>
+        <h2>Select the role for logging in</h2>
     </div>
+    
     <div class="Role Select">
-        <button>Administration</button> <br>
-        <button>Teacher</button> <br>
-        <button>Student</button> <br>
+        <div class="role-card">
+            <b><h3>Administration</h3></b>
+            <a href="http://127.0.0.1:5500/Gaurav/login.html" target="_blank"><button>Login</button></a>
+        </div>
+        <div class="role-card">
+            <b><h3>Teacher</h3></b>
+            <a href="http://127.0.0.1:5500/Gaurav/login.html" target="_blank"><button>Login</button></a>
+        </div>
+        <div class="role-card">
+            <b><h3>Student</h3></b>
+            <a href="http://127.0.0.1:5500/Gaurav/login.html" target="_blank"><button>Login</button></a>
+        </div>
     </div>
+
+    <section id="about" class="about-section">
+        <h2>About Us</h2>
+        <p>We are dedicated to providing quality education and fostering a supportive learning environment. Our mission is to empower students to achieve their academic and personal goals.</p>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>Follow us on:</p>
+        <a href="https://www.facebook.com" target="_blank">Facebook</a>
+        <a href="https://www.twitter.com" target="_blank">Twitter</a>
+        <a href="https://www.instagram.com" target="_blank">Instagram</a>
+    </footer>
 </body>
 </html>
