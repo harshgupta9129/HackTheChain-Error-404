@@ -1,9 +1,9 @@
 // Hardcoded student data
 const students = [
-    { rollNo: '101', name: 'John Doe', branch: 'CSE', year: '1', marks: 85, grade: 'A' },
-    { rollNo: '102', name: 'Jane Smith', branch: 'ECE', year: '1', marks: 78, grade: 'B+' },
-    { rollNo: '103', name: 'Alice Johnson', branch: 'AIDE', year: '1', marks: 92, grade: 'A-' },
-    { rollNo: '104', name: 'Bob Brown', branch: 'CSE', year: '1', marks: 88, grade: 'B' },
+    { rollNo: '101', name: 'Kunal', branch: 'CSE', year: '1', marks: 85, grade: 'A' },
+    { rollNo: '102', name: 'Prateek Pareek', branch: 'ECE', year: '1', marks: 78, grade: 'B+' },
+    { rollNo: '103', name: 'Ujjwal Sharma', branch: 'AIDE', year: '1', marks: 92, grade: 'A-' },
+    { rollNo: '104', name: 'Aakarsh', branch: 'CSE', year: '1', marks: 88, grade: 'B' },
     { rollNo: '105', name: 'Rohit sharma', branch: 'AIDE', year: '1', marks: 81, grade: 'B' },
     {rollNo: '106', name: 'Jatin Agarwal', branch: 'CSE', year: '1', marks: 75, grade: 'B-'},
     {rollNo: '107', name: 'Gaurav Gupta', branch: 'CSE', year: '1', marks: 95, grade: 'A'},
@@ -13,16 +13,16 @@ const students = [
   
   // Hardcoded reports data
   const reports = [
-    { rollNo: '101', name: 'John Doe', subject: 'Math', issue: 'Marks discrepancy', status: 'Pending' },
-    { rollNo: '102', name: 'Jane Smith', subject: 'Science', issue: 'Grade incorrect', status: 'Resolved' },
-    { rollNo: '103', name: 'Alice Johnson', subject: 'History', issue: 'Answer sheet missing', status: 'Pending' },
+    { rollNo: '101', name: 'Kunal', subject: 'computer science', issue: 'Marks discrepancy', status: 'Pending' },
+    { rollNo: '102', name: 'Prateek Pareek', subject: 'computer science', issue: 'Grade incorrect', status: 'Resolved' },
+    { rollNo: '103', name: 'Ujjwal Sharma', subject: 'computer science', issue: 'Answer sheet missing', status: 'Pending' },
   ];
   
   // Hardcoded answer sheets data
   const answerSheets = [
-    { rollNo: '101', name: 'John Doe', subject: 'Math', answerSheet: 'math_101.pdf' },
-    { rollNo: '102', name: 'Jane Smith', subject: 'Science', answerSheet: 'science_102.pdf' },
-    { rollNo: '103', name: 'Alice Johnson', subject: 'History', answerSheet: 'history_103.pdf' },
+    { rollNo: '101', name: 'Kunal', subject: 'Computer science', answerSheet: 'math_101.pdf' },
+    { rollNo: '102', name: 'Prateek Pareek', subject: 'computer science', answerSheet: 'science_102.pdf' },
+    { rollNo: '103', name: 'Ujjwal Sharma', subject: 'computer science', answerSheet: 'history_103.pdf' },
   ];
   
   // DOM Elements
