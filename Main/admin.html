@@ -1,0 +1,39 @@
+<!-- admin.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Administration Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Welcome, <span id="adminName"></span></h1>
+  <h2>Add a New User</h2>
+  <form id="addUserForm">
+    <label for="newRole">Role:</label>
+    <select id="newRole" required>
+      <option value="">Select Role</option>
+      <option value="student">Student</option>
+      <option value="teacher">Teacher</option>
+    </select>
+
+    <label for="newUsername">Username:</label>
+    <input type="text" id="newUsername" required>
+
+    <button type="submit">Add User</button>
+  </form>
+
+  <h2>Upload Exam Copy</h2>
+  <form id="uploadExamForm">
+    <label for="examName">Exam Name:</label>
+    <input type="text" id="examName" required>
+
+    <label for="examFile">Select File:</label>
+    <input type="file" id="examFile" required>
+
+    <button type="submit">Upload Exam</button>
+  </form>
+
+  <script src="app.js"></script>
+</body>
+</html>

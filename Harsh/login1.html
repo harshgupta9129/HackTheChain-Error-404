@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: white;
+            animation: fadeIn 0.5s ease-out;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+            opacity: 0;
+            animation: fadeUp 0.5s ease-out forwards;
+            animation-delay: 0.2s;
+            transform-origin: center;
+            transition: transform 0.3s ease-out;
+        }
+
+        @keyframes fadeUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .container:hover {
+            transform: scale(1.05);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 28px;
+            font-weight: 700;
+            color: #333;
+            animation: slideIn 0.5s ease-out forwards;
+            animation-delay: 0.4s;
+        }
+
+        @keyframes slideIn {
+            0% {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        label {
+            font-size: 16px;
+            margin-bottom: 5px;
+            text-align: left;
+            display: block;
+            color: #333;
+        }
+
+        .details {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            background-color: #f9f9f9;
+            color: #333;
+            outline: none;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+            opacity: 0;
+            animation: fadeInInput 0.5s ease-out forwards;
+            animation-delay: 0.5s;
+        }
+
+        @keyframes fadeInInput {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        input:hover {
+            transform: translateY(-5px);
+        }
+
+        input:focus {
+            border-color: #2575fc;
+            box-shadow: 0 0 8px rgba(37, 117, 252, 0.3);
+            transform: translateY(-5px);
+        }
+
+        button {
+            padding: 12px 15px;
+            background-color: #2575fc;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.2s ease-in-out;
+            opacity: 0;
+            animation: fadeInButton 0.5s ease-out forwards;
+            animation-delay: 0.6s;
+        }
+
+        @keyframes fadeInButton {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        button:hover {
+            background-color: #1d64e1;
+            transform: scale(1.05);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .forgot-password {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #2575fc;
+            opacity: 0;
+            animation: fadeInLink 0.5s ease-out 0.9s forwards;
+        }
+
+        .forgot-password a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .forgot-password a:hover {
+            text-decoration: underline;
+        }
+
+        @keyframes fadeInLink {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .register {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #2575fc;
+            opacity: 0;
+            animation: fadeInLink 0.5s ease-out 1.2s forwards;
+        }
+
+        .register a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .register a:hover {
+            text-decoration: underline;
+        }
+
+        .description {
+            text-align: center;
+            margin-top: 20px;
+            opacity: 0;
+            animation: fadeInDescription 0.5s ease-out forwards;
+            animation-delay: 1s;
+        }
+
+        .description h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: white;
+            font-weight: bold;
+        }
+
+        .description p {
+            font-size: 16px;
+            color: white;
+        }
+
+        @keyframes fadeInDescription {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="description">
+        <h1>Get into your Academic Insights</h1>
+        <p>Sign in to access your personalized dashboard.</p>
+    </div><hr><br><br>
+    <div class="container">
+        <h1>Login for Administration</h1>
+        <form class="details">
+            <label for="email">Enter your email:</label>
+            <input type="email" placeholder="Email" id="email" name="email" required>
+
+            <label for="password">Enter Password:</label>
+            <input type="password" placeholder="Password" id="password" name="password" required>
+
+            <button type="submit">Login</button>
+        </form>
+
+        <div class="forgot-password">
+            <a href="#">Forgot Password?</a>
+        </div>
+
+        <div class="register">
+            <a href="#">Don't have an account? Register for free</a>
+        </div>
+    </div>
+</body>
+</html>

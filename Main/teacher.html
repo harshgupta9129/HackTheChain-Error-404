@@ -1,0 +1,27 @@
+<!-- teacher.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Teacher Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Welcome, <span id="teacherName"></span></h1>
+  <h2>Upload Student Marks</h2>
+  <form id="marksForm">
+    <label for="student">Student Username:</label>
+    <input type="text" id="student" required>
+
+    <label for="subject">Subject:</label>
+    <input type="text" id="subject" required>
+
+    <label for="grade">Grade:</label>
+    <input type="text" id="grade" required>
+
+    <button type="submit">Upload Marks</button>
+  </form>
+
+  <script src="app.js"></script>
+</body>
+</html>

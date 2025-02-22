@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #6a11cb, #2575fc); /* Blue gradient */
+            color: white;
+            overflow: hidden;
+            flex-direction: column;
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .description {
+            text-align: center;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeInText 0.5s ease-out 0.3s forwards;
+        }
+
+        @keyframes fadeInText {
+            0% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            color: white;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        .container {
+        background: lightgray; /* New color for the container */
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        width: 100%;
+        max-width: 400px;
+        text-align: center;
+        opacity: 0;
+        animation: fadeUp 0.5s ease-out forwards;
+        animation-delay: 0.6s;
+    }
+
+
+        @keyframes fadeUp {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: 2px solid #ddd;
+            font-size: 16px;
+            outline: none;
+            background-color: #f9f9f9;
+            transition: 0.3s;
+        }
+
+        input:focus {
+            border-color: #2575fc;
+            box-shadow: 0 0 10px rgba(37, 117, 252, 0.2);
+        }
+
+        button {
+            padding: 12px;
+            width: 100%;
+            border: none;
+            background-color: #2575fc;
+            color: white;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        button:hover {
+            background-color: #1d64e1;
+            transform: scale(1.05);
+        }
+
+        .forgot-password,
+        .register {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .forgot-password a,
+        .register a {
+            text-decoration: none;
+            color: #2575fc;
+            transition: color 0.2s;
+        }
+
+        .forgot-password a:hover,
+        .register a:hover {
+            color: #1d64e1;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 20px;
+            }
+
+            .container {
+                width: 100%;
+                padding: 20px;
+            }
+
+            button {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="description">
+        <h1>Get into your Academic Insights</h1>
+        <p>Sign in to access your personalized dashboard.</p>
+    </div>
+    <div class="container">
+        <h1>Login</h1>
+        <form class="details" onsubmit="return handleLogin(event)">
+            <label for="email">Enter your email:</label>
+            <input type="email" placeholder="Email" id="email" name="email" required>
+
+            <label for="password">Enter Password:</label>
+            <input type="password" placeholder="Password" id="password" name="password" required>
+
+            <button type="submit">Login for Teacher</button>
+        </form>
+
+        <div class="forgot-password">
+            <a href="#">Forgot Password?</a>
+        </div>
+
+        <div class="register">
+            <a href="#">Don't have an account? Register for free</a>
+        </div>
+    </div>
+
+    <script>
+        function handleLogin(event) {
+            event.preventDefault();  // Prevent form submission
+
+            // Get the role from the URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const role = urlParams.get('role'); 
+
+            // For demo purposes, just checking login here
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            // Simulate login success (this should be replaced with your backend logic)
+            if (email && password) {
+                // Redirect based on role
+                if (role === 'admin') {
+                    window.location.href = "administration.html";  // Admin dashboard
+                } else if (role === 'teacher') {
+                    window.location.href = "teacher_dashboard.html";  // Teacher dashboard
+                } else if (role === 'student') {
+                    window.location.href = "student_dashboard.html";  // Student dashboard
+                }
+            } else {
+                alert("Please enter valid credentials!");
+            }
+        }
+    </script>
+</body>
+</html>

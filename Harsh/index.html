@@ -4,26 +4,134 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>College Portal</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            color: #333;
+        }
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+        nav ol {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+        nav ol a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        nav ol a button {
+            background: none;
+            border: 1px solid #fff;
+            color: #fff;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        nav ol a button:hover {
+            background-color: #fff;
+            color: #333;
+        }
+        .Welcome {
+            text-align: center;
+            margin: 50px 0;
+        }
+        .log_in {
+            text-align: center;
+        }
+        .Role.Select {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .role-card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 0 15px;
+            padding: 20px;
+            text-align: center;
+            width: 200px;
+        }
+        .role-card h3 {
+            margin: 0;
+            font-size: 1.2em;
+        }
+        .role-card button {
+            background: #4facfe;
+            border: none;
+            border-radius: 4px;
+            color: #fff;
+            cursor: pointer;
+            margin-top: 10px;
+            padding: 10px 20px;
+        }
+        .role-card button:hover {
+            background: #00f2fe;
+        }
+        .about-section, .contact-section {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            padding: 20px;
+            width: 80%;
+        }
+        .contact-section form {
+            display: flex;
+            flex-direction: column;
+        }
+        .contact-section input, .contact-section textarea {
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            padding: 10px;
+            width: 100%;
+        }
+        .contact-section button {
+            background: #4facfe;
+            border: none;
+            border-radius: 4px;
+            color: #fff;
+            cursor: pointer;
+            padding: 10px 20px;
+            width: 100px;
+            align-self: flex-end;
+        }
+        .contact-section button:hover {
+            background: #00f2fe;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        footer a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
+    <nav>
+        <ol>
+            <a href="#home"><button>Home</button></a>
+            <a href="#about"><button>About Us</button></a>
+            <a href="#contact"><button>Contact Us</button></a>
+            <a href="#help"><button>Help</button></a>
+        </ol>
+    </nav>
     <div class="Welcome">
         <h1>Welcome to College Portal!</h1>
     </div>
-    
-    <nav>
-        <ol>
-            <a href="https://www.google.com/" target="_blank"><button>Home</button></a>
-            <a href="https://www.google.com/" target="_blank"><button>About Us</button></a>
-            <a href="https://www.google.com/" target="_blank"><button>Contact Us</button></a>
-            <a href="https://www.google.com/" target="_blank"><button>Help</button></a>
-        </ol>
-    </nav>
-
-    <!-- <div class="search-container">
-        <input type="text" placeholder="Search..." class="search-bar">
-        <button class="search-button">Search</button>
-    </div> -->
 
     <hr>
     
@@ -33,16 +141,34 @@
     
     <div class="Role Select">
         <div class="role-card">
-            <button>Administration</button>
+            <h3>Administration</h3>
+            <a href="login1.html?role=admin"><button>Login</button></a>
         </div>
         <div class="role-card">
-            <button>Teacher</button>
+            <h3>Teacher</h3>
+            <a href="login.html?role=teacher"><button>Login</button></a>
         </div>
         <div class="role-card">
-            <button>Student</button>
+            <h3>Student</h3>
+            <a href="login.html?role=student"><button>Login</button></a>
         </div>
     </div>
 
+    <section id="about" class="about-section">
+        <h2>About Us</h2>
+        <p>We are dedicated to providing quality education and fostering a supportive learning environment. Our mission is to empower students to achieve their academic and personal goals.</p>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+    
     <footer>
         <p>Follow us on:</p>
         <a href="https://www.facebook.com" target="_blank">Facebook</a>

@@ -1,0 +1,79 @@
+<!-- student.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Welcome, <span id="studentName"></span></h1>
+    <nav>
+      <a href="#" id="logout">Logout</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Semester Grades Section -->
+    <section id="semesterGradesSection">
+      <h2>Your Semester Grades</h2>
+      <table id="semesterGradesTable">
+        <thead>
+          <tr>
+            <th>Semester</th>
+            <th>GPA</th>
+            <th>Percentage</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Semester grades will be populated here -->
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Detailed Grades Section -->
+    <section id="gradesSection">
+      <h2>Your Subject Grades</h2>
+      <table id="gradesTable">
+        <thead>
+          <tr>
+            <th>Subject</th>
+            <th>Marks</th>
+            <th>Grade</th>
+            <th>Exam Copy</th>
+            <th>Feedback</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Grades will be populated here -->
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Report an Issue Section -->
+    <section id="reportSection">
+      <h2>Report an Issue</h2>
+      <form id="reportForm">
+        <label for="issueSubject">Subject:</label>
+        <select id="issueSubject" required>
+          <!-- Subjects will be populated here -->
+        </select>
+
+        <label for="issueDescription">Describe the issue:</label>
+        <textarea id="issueDescription" rows="4" required></textarea>
+
+        <button type="submit">Submit Report</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Your School Name</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
+

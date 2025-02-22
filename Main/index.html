@@ -1,0 +1,28 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>School Portal Login</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>School Portal Login</h1>
+  <form id="loginForm">
+    <label for="role">Login as:</label>
+    <select id="role" required>
+      <option value="">Select Role</option>
+      <option value="student">Student</option>
+      <option value="teacher">Teacher</option>
+      <option value="admin">Administrator</option>
+    </select>
+
+    <label for="username">Username:</label>
+    <input type="text" id="username" required>
+
+    <button type="submit">Login</button>
+  </form>
+
+  <script src="app.js"></script>
+</body>
+</html>
