@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Teacher Dashboard</title>
+  <link rel="stylesheet" href="teacher.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <aside id="sidebar">
+    <div class="profile">
+      <img src="images/teacher_profile.png" alt="Teacher Profile Picture" id="profilePicture">
+      <h2 id="teacherName">Prof. Jane Doe</h2>
+      <p id="teacherRole">Computer Science Department</p>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#dashboard" class="active"><i class="fas fa-home"></i> Dashboard</a></li>
+        <li><a href="#students"><i class="fas fa-users"></i> Students</a></li>
+        <li><a href="#grading"><i class="fas fa-chart-line"></i> Grading System</a></li>
+        <li><a href="#reports"><i class="fas fa-flag"></i> Reports</a></li>
+        <li><a href="#analytics"><i class="fas fa-chart-pie"></i> Class Analytics</a></li>
+        <li><a href="#answerSheets"><i class="fas fa-file-alt"></i> Answer Sheets</a></li>
+        <li><a href="#" id="logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main id="mainContent">
+    <!-- Dashboard Section -->
+    <section id="dashboard">
+      <h1>Welcome back, <span id="teacherFirstName">Jane</span>!</h1>
+      <div class="cards">
+        <div class="card">
+          <h3>Total Students</h3>
+          <p id="totalStudents">150</p>
+        </div>
+        <div class="card">
+          <h3>Pending Reports</h3>
+          <p id="pendingReports">8</p>
+        </div>
+        <div class="card">
+          <h3>Class Average</h3>
+          <p id="classAverage">78%</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Students Section -->
+    <section id="students">
+      <h2>Manage Students</h2>
+      <div class="filters">
+        <select id="filterBranch">
+          <option value="">All Branches</option>
+          <option value="CSE">CSE</option>
+          <option value="ECE">ECE</option>
+          <option value="AIDE">AIDE</option>
+        </select>
+        <select id="filterYear">
+          <option value="">All Years</option>
+          <option value="1">1st Year</option>
+          <option value="2">2nd Year</option>
+          <option value="3">3rd Year</option>
+          <option value="4">4th Year</option>
+        </select>
+        <input type="text" id="filterRollNo" placeholder="Search by Roll No">
+        <button id="applyFilters"><i class="fas fa-filter"></i> Apply Filters</button>
+      </div>
+      <table id="studentsTable">
+        <thead>
+          <tr>
+            <th>Roll No</th>
+            <th>Name</th>
+            <th>Branch</th>
+            <th>Year</th>
+            <th>Marks</th>
+            <th>Grade</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Student data will be populated here -->
+        </tbody>
+      </table>
+      <button id="addStudentMarks"><i class="fas fa-plus"></i> Add Marks</button>
+    </section>
+
+    <!-- Grading System Section -->
+    <section id="grading">
+      <h2>Grading System</h2>
+      <p>Automatically assign grades based on percentage:</p>
+      <div class="gradingRules">
+        <p>90% and above: <strong>A</strong></p>
+        <p>80% - 89%: <strong>B</strong></p>
+        <p>70% - 79%: <strong>C</strong></p>
+        <p>60% - 69%: <strong>D</strong></p>
+        <p>Below 60%: <strong>F</strong></p>
+      </div>
+      <button id="autoGrade"><i class="fas fa-calculator"></i> Auto-Grade All Students</button>
+    </section>
+
+    <!-- Reports Section -->
+    <section id="reports">
+      <h2>Student Reports</h2>
+      <table id="reportsTable">
+        <thead>
+          <tr>
+            <th>Roll No</th>
+            <th>Name</th>
+            <th>Subject</th>
+            <th>Issue</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Reports will be populated here -->
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Class Analytics Section -->
+    <section id="analytics">
+      <h2>Class Analytics</h2>
+      <div class="analyticsCards">
+        <div class="card">
+          <h3>Top Performing Student</h3>
+          <p id="topStudent">John Doe - 95%</p>
+        </div>
+        <div class="card">
+          <h3>Subject-wise Average</h3>
+          <ul id="subjectAverages">
+            <li>Math: 85%</li>
+            <li>Science: 78%</li>
+            <li>History: 92%</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Answer Sheets Section -->
+    <section id="answerSheets">
+      <h2>Answer Sheets</h2>
+      <div class="filters">
+        <select id="filterSubject">
+          <option value="">All Subjects</option>
+          <option value="Math">Math</option>
+          <option value="Science">Science</option>
+          <option value="History">History</option>
+        </select>
+        <input type="text" id="filterStudentName" placeholder="Search by Student Name">
+        <button id="applyAnswerFilters"><i class="fas fa-filter"></i> Apply Filters</button>
+      </div>
+      <table id="answerSheetsTable">
+        <thead>
+          <tr>
+            <th>Roll No</th>
+            <th>Name</th>
+            <th>Subject</th>
+            <th>Answer Sheet</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Answer sheets will be populated here -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <!-- Add Marks Modal -->
+  <div id="addMarksModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Add Student Marks</h2>
+      <form id="addMarksForm">
+        <label for="rollNo">Roll No:</label>
+        <input type="text" id="rollNo" name="rollNo" required>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="branch">Branch:</label>
+        <select id="branch" name="branch" required>
+          <option value="CSE">CSE</option>
+          <option value="ECE">ECE</option>
+          <option value="AIDE">AIDE</option>
+        </select>
+        <label for="year">Year:</label>
+        <select id="year" name="year" required>
+          <option value="1">1st Year</option>
+          <option value="2">2nd Year</option>
+          <option value="3">3rd Year</option>
+          <option value="4">4th Year</option>
+        </select>
+        <label for="marks">Marks:</label>
+        <input type="number" id="marks" name="marks" min="0" max="100" required>
+        <button type="submit"><i class="fas fa-save"></i> Save</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="teacher.js"></script>
+</body>
+</html>
