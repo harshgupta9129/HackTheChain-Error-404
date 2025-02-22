@@ -2,10 +2,10 @@
 let students = [
   {
     rollNo: '101',
-    name: 'John Doe',
+    name: 'Jatin Agarwal',
     branch: 'CSE',
-    year: '2',
-    fatherName: 'Robert Doe',
+    year: '1',
+    fatherName: 'Agarwal',
     age: 20,
     dob: '2003-05-15',
     address: '123 Main St, City',
@@ -13,27 +13,64 @@ let students = [
   },
   {
     rollNo: '102',
-    name: 'Jane Smith',
+    name: 'Harsh Gupta',
     branch: 'ECE',
-    year: '3',
-    fatherName: 'Michael Smith',
+    year: '1',
+    fatherName: 'Gupta',
     age: 21,
     dob: '2002-08-22',
-    address: '456 Elm St, Town',
+    address: 'near college iiit kota',
+    feeStatus: 'Pending',
+  },
+  {
+    rollNo: '103',
+    name: 'Raghav Gupta',
+    branch: 'ECE',
+    year: '1',
+    fatherName: 'Mr. Gupta',
+    age: 22,
+    dob: '2003-08-22',
+    address: 'near hospital',
+    feeStatus: 'Pending',
+  },
+  {
+    rollNo: '104',
+    name: 'Gaurav Gupta',
+    branch: 'CSE',
+    year: '1',
+    fatherName: 'Mr. Ashok Gupta',
+    age: 19,
+    dob: '2002-09-25',
+    address: 'near mandir',
+    feeStatus: 'Pending',
+  },
+  {
+    rollNo: '105',
+    name: 'Ujjwal Sharma',
+    branch: 'ECE',
+    year: '1',
+    fatherName: 'Mr. sharma',
+    age: 17,
+    dob: '2004-10-22',
+    address: 'colony no 12',
     feeStatus: 'Pending',
   },
 ];
 
 // Hardcoded teacher data
 let teachers = [
-  { id: 'T101', name: 'Prof. Alice Johnson', department: 'CSE' },
-  { id: 'T102', name: 'Prof. Bob Brown', department: 'ECE' },
+  { id: 'T101', name: 'Prof. Ajay Nehra', department: 'CSE' },
+  { id: 'T102', name: 'Prof. Anand Agarwal', department: 'ECE' },
+  {id: 'T103', name: 'Prof. Ritam sharma', department: 'AI'},
 ];
 
 // Hardcoded answer sheets data
 let answerSheets = [
-  { rollNo: '101', name: 'John Doe', subject: 'Math', answerSheet: 'math_101.pdf' },
-  { rollNo: '102', name: 'Jane Smith', subject: 'Science', answerSheet: 'science_102.pdf' },
+  { rollNo: '101', name: 'Jatin Agarwal', subject: 'Math', answerSheet: 'Math_101.pdf' },
+  { rollNo: '102', name: 'Harsh Gupta', subject: 'Science', answerSheet: 'Math_101.pdf' },
+  {rollNo: '103', name: 'Gaurav Gupta', subject: 'communication skills', answerSheet: 'Math_101.pdf'},
+  {rollNo: '102', name: 'Harsh Gupta', subject: 'Artificial Intelligence', answerSheet: 'Ai_102.pdf'},
+  {rollNo: '101', name: 'Jatin Agarwal', subject: 'Math', answerSheet: 'Math_101.pdf'},
 ];
 
 // DOM Elements
