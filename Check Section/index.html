@@ -1,74 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>College Portal</title>
+    <title>College Portal - Welcome</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="script.js" defer></script>
 </head>
+
 <body>
-    <div class="Welcome">
-        <h1>Welcome to College Portal!</h1>
-    </div>
-    
-    <nav>
-        <ol>
-            <a href="#home"><button>Home</button></a>
-            <a href="#about"><button>About Us</button></a>
-            <a href="#contact"><button>Contact Us</button></a>
-            <a href="#help"><button>Help</button></a>
-        </ol>
-    </nav>
-
-    <div class="search-container">
-        <input type="text" placeholder="Search..." class="search-bar">
-        <button class="search-button">Search</button>
-    </div>
-
-    <hr>
-    
-    <div class="log_in">
-        <h2>Select the role for logging in</h2>
-    </div>
-    
-    <div class="Role Select">
-        <div class="role-card">
-            <img src="admin.png" alt="Administration">
-            <h3>Administration</h3>
-            <button>Login</button>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="College Logo">
+            <h1>College Name</h1>
         </div>
-        <div class="role-card">
-            <img src="teacher.png" alt="Teacher">
-            <h3>Teacher</h3>
-            <button>Login</button>
-        </div>
-        <div class="role-card">
-            <img src="student.png" alt="Student">
-            <h3>Student</h3>
-            <button>Login</button>
-        </div>
-    </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#news">News & Events</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <section id="about" class="about-section">
-        <h2>About Us</h2>
-        <p>We are dedicated to providing quality education and fostering a supportive learning environment. Our mission is to empower students to achieve their academic and personal goals.</p>
-    </section>
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <h2>Welcome to Our College Portal!</h2>
+                <p>Your gateway to academic excellence and a vibrant campus community.</p>
+                <a href="#about" class="cta-button">Learn More</a>
+            </div>
+        </section>
 
-    <section id="contact" class="contact-section">
-        <h2>Contact Us</h2>
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
+        <section id="search" class="search-section">
+            <div class="search-container">
+                <input type="text" placeholder="Search courses, programs, etc." class="search-bar">
+                <button class="search-button" aria-label="Search"><i class="fas fa-search"></i></button>
+            </div>
+        </section>
 
-    <footer>
-        <p>Follow us on:</p>
-        <a href="https://www.facebook.com" target="_blank">Facebook</a>
-        <a href="https://www.twitter.com" target="_blank">Twitter</a>
-        <a href="https://www.instagram.com" target="_blank">Instagram</a>
-    </footer>
-</body>
-</html>
+        <section id="login-roles" class="login-roles-section">
+            <h2>Login</h2>
+            <p>Select your role to access the portal:</p>
+            <div class="role-cards">
+                <div class="role-card">
+                    <h3>Administration</h3>
+                    <p>Manage college resources and information.</p>
+                    <a href="login1.html?role=admin" class="login-button">Login</a>
+                </div>
+                <div class="role-card">
+                    <h3>Teacher</h3>
+                    <p>Access course materials, manage grades, and communicate with students.</p>
+                    <a href="login.html?role=teacher" class="login-button">Login</a>
+                  </div>
+                  <div class="role-card">
+                      <h3>Student</h3>
+                      <p>View course schedules, grades, and access learning resources.</p>
+                      <a href="login.html?role=student" class="login-button">Login</a>
+                  </div>
+              </div>
+          </section>
+  
+          <section id="about" class="about-section">
+              <h2>About Our College</h2>
+              <div class="about-content">
+                  <img src="college_building.jpg" alt="College Building" class="about-image">
+                  <p>We are a leading institution dedicated to providing high-quality education and fostering a supportive
+                      learning environment. Our mission is to empower students to achieve their academic and personal
+                      goals and to become responsible and engaged citizens.</p>
+                  <p>Founded in [Year], we have a long tradition of excellence in teaching, research, and community
+                      service. Our faculty are experts in their fields and are committed to providing students with a
+                      challenging and rewarding educational experience.</p>
+              </div>
+          </section>
+  
+          <section id="courses" class="courses-section">
+              <h2>Our Courses</h2>
+              <div class="course-list">
+                  <ul>
+                      <li><a href="#">Introduction to Computer Science</a></li>
+                      <li><a href="#">Calculus I</a></li>
+                      <li><a href="#">Principles of Marketing</a></li>
+                      <li><a href="#">World History</a></li>
+                      <li><a href="#">Organic Chemistry</a></li>
+                  </ul>
+              </div>
+          </section>
+  
+          <section id="testimonials" class="testimonials-section">
+              <h2>What Our Students Say</h2>
+              <div class="testimonial">
+                  <p>"This college has been an amazing experience. The professors are supportive and the learning
+                      environment is excellent."</p>
+                  <p class="author">- John Doe, Computer Science Student</p>
+              </div>
+              <div class="testimonial">
+                  <p>"I've gained valuable knowledge and skills here that have prepared me for my future career."</p>
+                    
